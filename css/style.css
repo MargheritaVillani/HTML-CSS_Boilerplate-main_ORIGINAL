@@ -27,6 +27,15 @@
 
 }
 
+.grass-container {
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+  scrollbar-width: none; /* Firefox */
+}
+
+.grass-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
 
 /* your own styling */
 h1 {
@@ -178,6 +187,9 @@ width: 100vw;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow-y: scroll;
+height: 100vh;
+position: relative;
 }
 
 .grass1-title{
@@ -237,6 +249,7 @@ align-items: center;
   border-radius: 100%;
   border: solid, 0.5px,black;
   font-family: redaction;
+  font-size: 12px;
   cursor: url(../assets/Images/cursor2.png) 32 32, auto;
   transition: 0.4s;
 }
@@ -347,17 +360,32 @@ gap: 5px;
 
 
 
-@media (max-width: 1000px){
-  .text-border-wrapper{
-    flex-direction: column;
+@media (max-width: 1080px){
+  
+  .grass-container img{ 
+    width: 90vw;
   }
-  .image-box{
-    flex-direction: column;
+
+  .h1{
+    font-size: 40vh;
   }
-  .text-box{
-    width: 100%;}
+
+  .grass1-title{
+    position: relative;
+font-size: 9vw;
+white-space: pre;
+  }
+
+  .sorry{
+    width: 70vw;
+      height: 50vh;
 }
 
+.button{
+  font-size: 20px;
+  margin: 20px;
+
+}
 
 .navigation a {
   transition: all 200ms linear;
